@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INTL LOTTO | เว็บหวยพรีเมียม</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Prompt', sans-serif; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-sky-950 to-slate-900 text-white min-h-screen">
+  <!-- Top Banner -->
+  <div class="w-full bg-slate-950/60 border-b border-sky-500/20">
+    <div class="max-w-6xl mx-auto px-6 py-6 flex items-center gap-6">
+      <img src="./1f259a78-06f9-47bb-bd20-81aaa56a36c3.png" alt="INTL LOTTO Logo" class="h-20 w-20 md:h-24 md:w-24 rounded-2xl shadow-xl" />
+      <img src="/mnt/data/lottery-banner.png" alt="Lottery Banner" class="hidden md:block h-20 rounded-xl shadow-lg" />
+      <div class="ml-auto flex items-center gap-3">
+        <div class="relative">
+        <button id="langBtn" class="bg-slate-900 border border-sky-500/30 rounded-xl px-3 py-2 flex items-center gap-2" onclick="toggleLang()">
+          <img id="langIcon" src="./thailand (1).png" class="h-5 w-5 rounded-full" /> <span id="langText">ไทย</span>
+        </button>
+        <div id="langMenu" class="hidden absolute right-0 mt-2 bg-slate-900 border border-sky-500/30 rounded-xl shadow-xl overflow-hidden">
+          <div onclick="pickLang('th')" class="px-4 py-2 hover:bg-sky-600/20 cursor-pointer flex items-center gap-2"><img src="./thailand (1).png" class="h-5 w-5 rounded-full"/> ไทย</div>
+          <div onclick="pickLang('en')" class="px-4 py-2 hover:bg-sky-600/20 cursor-pointer flex items-center gap-2"><img src="./united-kingdom (1).png" class="h-5 w-5 rounded-full"/> English</div>
+          <div onclick="pickLang('zh')" class="px-4 py-2 hover:bg-sky-600/20 cursor-pointer flex items-center gap-2"><img src="./china (1).png" class="h-5 w-5 rounded-full"/> 中文</div>
+        </div>
+      </div>
+        <button id="btnLoginTop" onclick="goLogin()" class="px-4 py-2 text-sm rounded-lg bg-sky-600 hover:bg-sky-500 transition font-semibold">เข้าสู่ระบบ</button>
+        <button id="btnRegisterTop" onclick="goRegister()" class="px-4 py-2 text-sm rounded-lg border border-sky-400 hover:bg-sky-600 transition font-semibold">สมัครสมาชิก</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Banner Image -->
+  <section class="max-w-6xl mx-auto px-4 pt-9">
+    <img src="./Gemini_Generated_Image_k7qklyk7qklyk7qk.png" alt="INTL LOTTO App Showcase" class="w-full rounded-3xl shadow-2xl mb-12" />
+  </section>
+
+  <!-- Hero Section -->
+  <section class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h1 id="t-title" class="text-4xl md:text-5xl font-bold mb-6">INTL LOTTO</h1>
+      <p id="t-desc" class="text-lg text-slate-300 mb-8">ศูนย์รวมแนวทางหวยระดับพรีเมียม วิเคราะห์จริง ด้วยสถิติและ AI<br>สมัครสมาชิกเพื่อรับเลขเด็ดก่อนใคร พร้อมสูตรลับเฉพาะ VIP</p>
+      <div class="flex gap-4">
+        <button id="btnLoginHero" onclick="goLogin()" class="px-5 py-2.5 text-sm rounded-lg bg-sky-600 hover:bg-sky-500 transition font-semibold">เข้าสู่ระบบ</button>
+        <button id="btnRegisterHero" onclick="goRegister()" class="px-5 py-2.5 text-sm rounded-lg border border-sky-400 hover:bg-sky-600 transition font-semibold">สมัครสมาชิก</button>
+      </div>
+    </div>
+
+    <div class="bg-slate-900/60 border border-sky-500/30 rounded-2xl p-8 shadow-2xl">
+      <h2 id="t-why" class="text-2xl font-semibold mb-4">ทำไมต้อง INTL LOTTO?</h2>
+      <ul id="t-features" class="space-y-3 text-slate-300">
+        <li>✔ วิเคราะห์เลขจากสถิติย้อนหลัง</li>
+        <li>✔ สูตรลับเฉพาะสมาชิก VIP</li>
+        <li>✔ แจ้งเตือนแนวทางก่อนหวยออก</li>
+        <li>✔ กลุ่ม Line VIP ปรึกษาเลข</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- App Showcase Section -->
+  <section class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">INTL LOTTO App – Simple. Powerful. Professional.</h2>
+      <p class="text-slate-300 mb-6">แอป INTL LOTTO ใช้งานง่าย ครบ จบในที่เดียว เล่นหวย วิเคราะห์ จัดการบัญชี และถอนเงินได้ในแอปเดียว ระบบเสถียร ปลอดภัย รองรับหลายภาษา</p>
+      <ul class="space-y-2 text-slate-300">
+        <li>✔ ระบบปลอดภัยระดับสากล</li>
+        <li>✔ วิเคราะห์ด้วย AI + สถิติจริง</li>
+        <li>✔ ถอนเงินไวภายในไม่กี่นาที</li>
+        <li>✔ รองรับหลายประเทศ</li>
+      </ul>
+    </div>
+    <div class="flex justify-center">
+      <img src="./Gemini_Generated_Image_k7qklyk7qklyk7qk1.jpg" alt="INTL LOTTO App Screens" class="max-w-full rounded-3xl shadow-2xl" />
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">ผู้ใช้งานกว่า 50,000+ คน ไว้วางใจ INTL LOTTO</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-slate-900/60 border border-sky-500/30 rounded-2xl p-6">
+        <p class="text-slate-300 mb-4">“ใช้ INTL LOTTO มา 3 เดือน กำไรจริง ถอนเร็วมาก ระบบดีสุดเท่าที่เคยใช้”</p>
+        <span class="text-sky-400">— คุณสมชาย, กรุงเทพ</span>
+      </div>
+      <div class="bg-slate-900/60 border border-sky-500/30 rounded-2xl p-6">
+        <p class="text-slate-300 mb-4">“Best online lottery platform I’ve ever used. Fast withdrawal and accurate analysis.”</p>
+        <span class="text-sky-400">— James, UK</span>
+      </div>
+      <div class="bg-slate-900/60 border border-sky-500/30 rounded-2xl p-6">
+        <p class="text-slate-300 mb-4">“非常专业的平台，分析很准，提现很快，非常推荐！”</p>
+        <span class="text-sky-400">— 王先生, 中国</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">แพลตฟอร์มหวยระดับพรีเมียม สำหรับคนที่จริงจังกับกำไร</h2>
+      <p class="text-slate-300 mb-6">INTL LOTTO คือศูนย์รวมแนวทางหวยระดับโลก ที่ผสาน AI และสถิติจริง เพื่อเพิ่มโอกาสทำกำไรของคุณ</p>
+      <ul class="space-y-3 text-slate-300">
+        <li>✔ ระบบปลอดภัยระดับสากล</li>
+        <li>✔ วิเคราะห์ด้วย AI + สถิติจริง</li>
+        <li>✔ แจ้งเตือนก่อนหวยออก</li>
+        <li>✔ ทีมงานดูแล 24 ชั่วโมง</li>
+      </ul>
+      <div class="mt-8 flex gap-3">
+        <button id="btnLoginBottom" onclick="goLogin()" class="px-5 py-2.5 text-sm rounded-lg bg-sky-600 hover:bg-sky-500 transition font-semibold">เข้าสู่ระบบ</button>
+        <button id="btnRegisterBottom" onclick="goRegister()" class="px-5 py-2.5 text-sm rounded-lg border border-sky-400 hover:bg-sky-600 transition font-semibold">สมัครสมาชิก</button>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <img src="./Gemini_Generated_Image_k7qklyk7qklyk7qk2.png" alt="INTL LOTTO Promo" class="max-w-full rounded-3xl shadow-2xl" />
+    </div>
+  </section>
+
+  <!-- Modal Login -->
+  <div id="loginModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center">
+    <div class="bg-slate-900 rounded-2xl p-8 w-full max-w-md">
+      <h3 class="text-2xl font-semibold mb-6">เข้าสู่ระบบ</h3>
+      <input class="w-full mb-4 px-4 py-3 rounded bg-slate-800" placeholder="อีเมล" />
+      <input type="password" class="w-full mb-6 px-4 py-3 rounded bg-slate-800" placeholder="รหัสผ่าน" />
+      <button class="w-full py-3 rounded bg-indigo-600 hover:bg-indigo-500">เข้าสู่ระบบ</button>
+      <button onclick="closeModal()" class="mt-4 w-full text-slate-400">ปิด</button>
+    </div>
+  </div>
+
+  <!-- Modal Register -->
+  <div id="registerModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center">
+    <div class="bg-slate-900 rounded-2xl p-8 w-full max-w-md">
+      <h3 class="text-2xl font-semibold mb-6">สมัครสมาชิก</h3>
+      <input class="w-full mb-4 px-4 py-3 rounded bg-slate-800" placeholder="ชื่อผู้ใช้" />
+      <input class="w-full mb-4 px-4 py-3 rounded bg-slate-800" placeholder="อีเมล" />
+      <input type="password" class="w-full mb-6 px-4 py-3 rounded bg-slate-800" placeholder="รหัสผ่าน" />
+      <button class="w-full py-3 rounded bg-indigo-600 hover:bg-indigo-500">สมัครสมาชิก</button>
+      <button onclick="closeModal()" class="mt-4 w-full text-slate-400">ปิด</button>
+    </div>
+  </div>
+
+  <script>
+    const LOGIN_URL = 'https://azoic-inadequately-valda.ngrok-free.dev';
+    function goLogin(){ window.location.href = LOGIN_URL; }
+    function goRegister(){ window.location.href = LOGIN_URL; }
+
+    const i18n = {
+      th: { title:'INTL LOTTO', desc:'ศูนย์รวมแนวทางหวยระดับพรีเมียม วิเคราะห์จริง ด้วยสถิติและ AI<br>สมัครสมาชิกเพื่อรับเลขเด็ดก่อนใคร พร้อมสูตรลับเฉพาะ VIP', why:'ทำไมต้อง INTL LOTTO?', btnLogin:'เข้าสู่ระบบ', btnRegister:'สมัครสมาชิก', features:[
+        '✔ วิเคราะห์เลขจากสถิติย้อนหลัง','✔ สูตรลับเฉพาะสมาชิก VIP','✔ แจ้งเตือนแนวทางก่อนหวยออก','✔ กลุ่ม Line VIP ปรึกษาเลข'
+      ]},
+      en: { title:'INTL LOTTO', desc:'Premium lottery guidance hub. Real analysis with statistics and AI.<br>Join to get winning numbers first with exclusive VIP formulas.', why:'Why INTL LOTTO?', btnLogin:'Login', btnRegister:'Register', features:[
+        '✔ Data-driven analysis','✔ Exclusive VIP formulas','✔ Pre-draw notifications','✔ VIP Line community'
+      ]},
+      zh: { title:'INTL LOTTO', desc:'高端彩票平台指南中心，基于统计与AI的真实分析。<br>加入获取独家VIP公式与提前通知。', why:'为什么选择 INTL LOTTO？', btnLogin:'登录', btnRegister:'注册', features:[
+        '✔ 数据驱动分析','✔ 独家VIP公式','✔ 开奖前通知','✔ VIP微信群'
+      ]}
+    };
+
+    function setLang(l){
+      var d = i18n[l];
+      document.getElementById('t-title').innerHTML = d.title;
+      document.getElementById('t-desc').innerHTML = d.desc;
+      document.getElementById('t-why').innerHTML = d.why;
+      var ul = document.getElementById('t-features');
+      if(ul){ ul.innerHTML = d.features.map(function(x){ return '<li>' + x + '</li>'; }).join(''); }
+      var idsLogin = ['btnLoginTop','btnLoginHero','btnLoginBottom'];
+      var idsReg   = ['btnRegisterTop','btnRegisterHero','btnRegisterBottom'];
+      idsLogin.forEach(function(id){ var el=document.getElementById(id); if(el) el.innerText=d.btnLogin; });
+      idsReg.forEach(function(id){ var el=document.getElementById(id); if(el) el.innerText=d.btnRegister; });
+    }
+
+    function toggleLang(){ document.getElementById('langMenu').classList.toggle('hidden'); }
+    function pickLang(l){
+      var map = { th:{t:'ไทย',i:'./thailand (1).png'}, en:{t:'English',i:'./united-kingdom (1).png'}, zh:{t:'中文',i:'./china (1).png'} };
+      document.getElementById('langText').innerText = map[l].t;
+      document.getElementById('langIcon').src = map[l].i;
+      document.getElementById('langMenu').classList.add('hidden');
+      setLang(l);
+    }
+
+    setLang('th');
+  </script>
+
+</body>
+</html>
